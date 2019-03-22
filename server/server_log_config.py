@@ -6,7 +6,7 @@ def setup_log_config():
     file_handler.setLevel(logging.DEBUG)
     logging.basicConfig(
         level=logging.DEBUG,
-        format='%(asctime)s - %(levelname)s - %(message)s',
+        format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
         handlers=[
             logging.StreamHandler(),
             file_handler
