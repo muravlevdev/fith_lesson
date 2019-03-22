@@ -3,7 +3,7 @@ import socket
 import argparse
 from routes import get_server_routes
 import logging
-from server_log_config import set_log_config
+from server_log_config import setup_log_config
 
 
 def sys_arg_parser():
@@ -60,7 +60,7 @@ if __name__ == "__main__":
     sock.bind((args.addr, int(args.port)))
     sock.listen(5)
 
-    set_log_config()
+    setup_log_config()
     
     logging.info(f'Server starts with host:{ args.addr } and port: { args.port }')
     while True:
